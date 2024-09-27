@@ -63,6 +63,9 @@ Data files:
 
 ## Exploratory Data Analysis
 Exploratory Data Analysis involved gaining a preliminary understanding of the data and identify potential insights and trends within the QuickyQuest Enterprises dataset. Key areas of the Exploration:
+
+![Data Exploration](https://github.com/user-attachments/assets/6dc5743d-730f-443a-8404-8e2ea51a8ff9)
+
 -	Identified distribution of customer characteristics, such as age, gender, and location.
 -	Evaluated sales performance of different product categories and individual products.
 -	Compared the performance of different stores in terms of revenue, customer traffic, and profitability.
@@ -191,20 +194,22 @@ Weekday/Weekend Revenue:
 -	Weekdays are the primary drivers of revenue for the company.
   
  Monthly Revenue Growth:
+ 
+ ![Month over Month](https://github.com/user-attachments/assets/58e55381-70b0-4606-bd71-bc75088cbc9a)
 -	Month of May and August exceeded their target revenue
   
 Quarterly Revenue Growth:
-•	The company's quarterly revenue has fluctuated throughout the year.
-•	There have been periods of growth and decline, indicating seasonality or other factors influencing revenue.
-•	The average quarterly revenue is approximately $136,869.
+-	The company's quarterly revenue has fluctuated throughout the year.
+-	There have been periods of growth and decline, indicating seasonality or other factors influencing revenue.
+-	The average quarterly revenue is approximately $136,869.
 
 **3.	Profitability View Dashboard (Profitability)**
 Profitability View Dashboard provides insights on:
-•	Customer Analysis: provide insights into the profit generated from male and female
+-	Customer Analysis: provide insights into the profit generated from male and female
   customers, and breaks down the average spending by customer age-groups, showing which age groups are most profitable.
-•	Profitability over Time: This includes a profit trend and month-over-month growth rate, which could help in identifying seasonal patterns or trends in sales effectiveness.
-•	Profitability by Weekday: Analyzes which days of the week generate the most profit.
-•	Product Analysis: Details the top-selling and most profitable products, as well as product return and refund rates. This is critical for inventory management and identifying which 
+-	Profitability over Time: This includes a profit trend and month-over-month growth rate, which could help in identifying seasonal patterns or trends in sales effectiveness.
+-	Profitability by Weekday: Analyzes which days of the week generate the most profit.
+-	Product Analysis: Details the top-selling and most profitable products, as well as product return and refund rates. This is critical for inventory management and identifying which 
   products are most valuable to the QuickyQuest business.
 
 ![Profitability View Dashboard](https://github.com/user-attachments/assets/8a0c6a6a-68cc-4a39-8e27-c97e5812bf95)
@@ -223,6 +228,9 @@ Volume-Driven Profitability:
 -	Top Profitable Products: Common Splash, Eight Brew, and Attorney Mist are not only top-selling but also highly profitable.
 
 Profitability Trends:
+
+![Profitability Trend](https://github.com/user-attachments/assets/93e1e820-111c-4574-9613-26aa7e963689)
+
 -	Trend in Profit & MOM Growth Rate: The overall profit trend has been positive, with month-over-month growth rates fluctuating but generally showing an upward trend.
 -	Profit Trend by Weekday: Tuesdays and Wednesdays generally have higher profit margins compared to other weekdays.
 
