@@ -1,9 +1,9 @@
 # Retail Sales Analysis 
 ## Introduction
-QuickyQuest Enterprises is a dynamic retail enterprise operating a network of ten conveniently located refreshment stores in the USA. Our mission is to provide customers with a quick, easy, and enjoyable shopping experience while offering a diverse selection of high-quality beverages.
 
 ![QuickyQuest Introduction](https://github.com/user-attachments/assets/327e064c-f2a0-48e1-bea7-330b017c1df9)
 
+QuickyQuest Enterprises is a dynamic retail enterprise operating a network of ten conveniently located refreshment stores in the USA. Our mission is to provide customers with a quick, easy, and enjoyable shopping experience while offering a diverse selection of high-quality beverages.
 QuickyQuest Enterprises operates a network of ten convenience refreshment stores throughout the USA:
 - Rapid Refreshment
 - Quest Grab
