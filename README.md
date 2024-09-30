@@ -13,6 +13,8 @@
 - [Data Analysis and Visualization](#data-analysis-and-visualization)
 - [Overall Performance Analysis Findings](#overall-performance-analysis-findings)
 - [Conclusions and Recommendations](#conclusions-and-recommendations)
+- [Limitations](#limitations)
+  
     
 ## Introduction
 
@@ -22,7 +24,6 @@ QuickyQuest Enterprises is a dynamic retail enterprise operating a network of te
 
 ![QuickyQuest stores](https://github.com/user-attachments/assets/8519bdb8-afe5-46a8-aaeb-24d4c964c5c3)
   
-All QuickyQuest stores are committed to providing excellent customer service and a clean, inviting atmosphere. Our friendly staff is always ready to assist customers and ensure a positive shopping experience. Our stores are strategically located and designed to provide customers with a quick and easy shopping experience, offering a wide variety of beverages, snacks, and other convenience items.
 
 # Problem Statement
 To gain a comprehensive understanding of customer behavior, product performance, and store-level profitability at QuickyQuest Enterprises, we need to answer the following questions:
@@ -117,11 +118,13 @@ Data Standardization: Merged First and Last name together.
 Data Enrichment: Added SalesPerson_Age column base on Date of Birth 
 
 **Created a new table for Date**
+
 Named the table Date. The Date table provided flexibility for custom calculations (i.e. Quarter, WeekType..) and data exploration-based time-related dimensions like weekday sales and weekend sales
 
 ![New table Date](https://github.com/user-attachments/assets/aa6d21ee-c9bd-4b4c-85ad-ab7fa2a68328)
 
 **Created a new table for Calculations** 
+
 Name the table Calculations. By creating a separate table for calculations in Power Query improved performance by reducing query complexity and joins. Separating calculations into a dedicated table helped in maintaining an organized data model. It also offered greater flexibility for custom calculations and reusable measures, while maintaining a cleaner data model. This approach helped me simplify maintenance and updates, making it easier to manage calculations within Power Pivot model. The following are some of the calculations done the on the calculation table:
 
 ```DAX Measures
@@ -170,7 +173,10 @@ Total Refund
 ```
 
 # Data Modelling
-Created a robust and efficient data model that supported the analysis of customer behavior, product performance, and store-level profitability at QuickyQuest Enterprises. By following this data modeling approach, QuickyQuest Enterprises was able to establish a solid foundation for data analysis and reporting, enabling informed decision-making and effective business management. The calculations part shows measures that were calculated within the data model. Separating calculations into a dedicated table helped maintain a clean and organized data model, making it easier to understand and manage.
+Created a robust and efficient data model that supported the analysis of customer behavior, product performance, and store-level profitability at QuickyQuest Enterprises. By following this data modeling approach, QuickyQuest Enterprises was able to establish a solid foundation for data analysis and reporting, enabling informed decision-making and effective business management. 
+
+> [!NOTE]
+> *The calculations part shows measures that were calculated within the data model. Separating calculations into a dedicated table helped maintain a clean and organized data model, making it easier to understand and manage.*
 
 ![Data Modelling](https://github.com/user-attachments/assets/05afe9b4-8265-4180-80b1-bce10306c212)
 
@@ -238,6 +244,9 @@ Profitability View Dashboard provides insights on:
 -	Profitability by Weekday: Analyzes which days of the week generate the most profit.
 -	Product Analysis: Details the top-selling and most profitable products, as well as product return and refund rates. This is critical for inventory management and identifying which 
   products are most valuable to the QuickyQuest business.
+ 	
+> [!IMPORTANT]
+> *To Access Filter For This Dashboard Click Open Filter Button* 
 
 ![Profitability View Dashboard](https://github.com/user-attachments/assets/8a0c6a6a-68cc-4a39-8e27-c97e5812bf95)
 
@@ -288,3 +297,13 @@ From the above Profitability View Dashboard:
 -	Data-Driven Decision Making: Utilize the insights from these dashboards to make informed decisions and drive business growth.
 -	Continuous Monitoring: Regularly review and analyze performance metrics to identify emerging trends and opportunities for improvement.
 By implementing these recommendations, QuickyQuest Enterprises has enhanced customer satisfaction, optimized profitability, and achieved sustainable growth.
+
+# Limitations
+I had to remove all the zero values from the target and revenue because they have affected my results from the anlysis. The data also did not cover all relevant aspects of the QuickyQuest business, such as customer satisfaction. 
+
+
+
+
+![Thank you note](https://github.com/user-attachments/assets/1c2a4fcc-87b2-4ec8-8ce6-95358acc3975)
+*I would like to express my sincere gratitude to everyone who has taken the time to view my QuickyQuest project. Your interest and feedback are invaluable to me.
+This project represents my passion for data analysis and my ability to leverage data to drive insights and inform decision-making. I have put a significant amount of effort into this project, and I hope you find it informative and engaging.*
