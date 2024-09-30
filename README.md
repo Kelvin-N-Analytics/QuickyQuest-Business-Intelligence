@@ -59,6 +59,7 @@ so that I could make data-driven decisions to optimize operations and improve ov
 # Data Source
 The primary data used in this analysis is ‘sales_data.csv’ file containing five (5) tables downloaded online.
 [Download Files Here](https://drive.google.com/file/d/1ymmNpf4jyo4ahXZY78F7irc9eQj6E_f0/view?usp=sharing)
+ 
 Data files:
 -	**Customer_table:** Contains information about customers, including Customer ID, First Name, Last Name, Gender, Location and Date of Birth. (610 rows of data)
 -	**Fact_table:** Contains transaction-level data, including Product ID, customer ID, Sales person ID, Order date, quantity sold, Quantity returned and Payment method. (*20,030 rows of 
@@ -126,34 +127,43 @@ Name the table Calculations. By creating a separate table for calculations in Po
 ```DAX Measures
 Total Revenue
 =SUMX(fact_table,RELATED(Dim_Products[Sales Price]) * fact_table[Quantity Sold])
+```
 
+```
 COGS
 =SUMX(fact_table,
                   RELATED(Dim_Products[Cost Price]) * fact_table[Quantity Sold])
+```
 
+```
 Profit Margin
 =[Total Revenue] - [COGS]
+```
 
+```
 % Profit Margin
 =DIVIDE(
                 [Profit Margin], 
                 [Total Revenue]
                 )
-
+```
+```
 Return Rate
 =DIVIDE(
                 [Qty Returned ],
                  SUM(fact_table[Quantity Sold]),
                   0
                   )
-
-
+```
+```
 Variance
 =[Total Revenue] - [Total Target]
-
+```
+```
 Variance %
 =([Total Revenue] - [Total Target]) / [Total Target]
-
+```
+```
 Total Refund
 =SUMX(fact_table,
                  fact_table[Quantity Returned] * RELATED(Dim_Products[Sales Price]))
