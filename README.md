@@ -1,47 +1,64 @@
 # Retail Sales Analysis 
+
+# Table of Contents
+
+
+- [Introduction](#introduction)
+- [Problem Statement](#problem-statement)
+- [User Story](#user-story)
+- [Data Source](#data-source)
+- [Exploratory Data Analysis](#exploratory-data-analysis)
+- [Tools](#tools)
+- [Data Transformation](#data-transformation)
+- [Data Modelling](#data-modelling)
+- [Data Analysis and Visualization](#data-analysis-and-visualization)
+  - [Store-Level Revenue vs Target Dashboard](Stores Revenue)](###store-level-revenue-vs-target-dashboard)
+- [Overall Performance Analysis Findings](#overall-performance-analysis-findings)
+- [Conclusions and Recommendations](#conclusions-and-recommendations)
+    
 ## Introduction
 
-![QuickyQuest Introduction](https://github.com/user-attachments/assets/327e064c-f2a0-48e1-bea7-330b017c1df9)
+![QuickyQuest Introduction](https://github.com/user-attachments/assets/52aa031d-4141-4576-88a2-5392dcea24af)
 
 QuickyQuest Enterprises is a dynamic retail enterprise operating a network of ten conveniently located refreshment stores in the USA. Our mission is to provide customers with a quick, easy, and enjoyable shopping experience while offering a diverse selection of high-quality beverages.
 QuickyQuest Enterprises operates a network of ten convenience refreshment stores throughout the USA:
-- Rapid Refreshment
-- Quest Grab
-- Quick Stop
-- Pour Palace
-- Quest Mart
-- Grab & Go
-- Quench Corner
-- Quick Mart
-- Icy Blast
-- Sip & Dash
+- *Rapid Refreshment*
+- *Quest Grab*
+- *Quick Stop*
+- *Pour Palace*
+- *Quest Mart*
+- *Grab & Go*
+- *Quench Corner*
+- *Quick Mart*
+- *Icy Blast*
+- *Sip & Dash*
   
 All QuickyQuest stores are committed to providing excellent customer service and a clean, inviting atmosphere. Our friendly staff is always ready to assist customers and ensure a positive shopping experience. Our stores are strategically located and designed to provide customers with a quick and easy shopping experience, offering a wide variety of beverages, snacks, and other convenience items.
 
-## Problem Statement
+# Problem Statement
 To gain a comprehensive understanding of customer behavior, product performance, and store-level profitability at QuickyQuest Enterprises, we need to answer the following questions:
-1.	**Customer Analysis:**
+1.	#### Customer Analysis
 -	What is the profitability of male and female customers?
 -	How do spending patterns vary across different age groups?
 -	Which customer segments are the most valuable to the business?
-2.	**Profitability Trends:**
+2.	#### Profitability Trends:
 -	Are there any seasonal patterns in profitability?
 -	What is the overall trend of profit growth over time?
 -	Are there any areas where profitability can be improved?
-3.	**Product Performance:**
+3.	#### Product Performance:
 -	Which products are the top-sellers and most profitable?
 -	What are the product return and refund rates for different products?
 - How can inventory management be optimized based on product performance data?
-4.	**Store Performance:**
+4.	#### Store Performance:
 -	Which stores are underperforming or exceeding revenue targets?
 -	What are the reasons for performance gaps at individual stores?
 -	How can resource allocation be optimized to improve store-level performance?
-5.	**Revenue Analysis:**
+5.	#### Revenue Analysis:
 -	What are the trends in quarterly and weekday/weekend revenue?
 -	Are there any areas where revenue can be optimized?
 -	How can operational decisions be informed by revenue analysis?
 
-## User Story
+# User Story
 I came across the dataset online and admired how comprehensive and rich the dataset is. As a data analyst, I want to work with a comprehensive and rich dataset to enhance my skills in data cleaning, data modeling, analysis, and visualization. I named the business QuickyQuest Enterprises and after exploring I came up with questions for the project.
 As a data analyst at QuickyQuest Enterprises, I want a comprehensive dashboard that provides insights into: 
 -	customer behavior.
@@ -50,18 +67,18 @@ As a data analyst at QuickyQuest Enterprises, I want a comprehensive dashboard t
    
 so that I could make data-driven decisions to optimize operations and improve overall QuickyQuest Enterprises business performance.
 
-## Data Source
+# Data Source
 The primary data used in this analysis is ‘sales_data.csv’ file containing five (5) tables downloaded online.
 [Download Files Here](https://drive.google.com/file/d/1ymmNpf4jyo4ahXZY78F7irc9eQj6E_f0/view?usp=sharing)
 Data files:
--	**Customer_table:** Contains information about customers, including Customer ID, First Name, Last Name, Gender, Location and Date of Birth. 610 rows of data
+-	**Customer_table:** Contains information about customers, including Customer ID, First Name, Last Name, Gender, Location and Date of Birth. (610 rows of data)
 -	**Fact_table:** Contains transaction-level data, including Product ID, customer ID, Sales person ID, Order date, quantity sold, Quantity returned and Payment method. (*20,030 rows of 
   data*) 
 -	**Monthly_store_targets:** Contains monthly revenue targets for each store, including Store ID, Month, Monthly Target. (*120 rows of data*)
 -	**Products_table:** Contains information about products, including Product ID, Product Name, Category, Sales Price, and Cost Price. (*100 rows of data*)
 -	**Sales_persons_table:** Contains information about salespersons, including Sales Person ID, First Name, Last Name, Store Name and Date of Birth. (*10 rows of data*)
 
-## Exploratory Data Analysis
+# Exploratory Data Analysis
 Exploratory Data Analysis involved gaining a preliminary understanding of the data and identify potential insights and trends within the QuickyQuest Enterprises dataset. Key areas of the Exploration:
 
 ![Data Exploration](https://github.com/user-attachments/assets/6dc5743d-730f-443a-8404-8e2ea51a8ff9)
@@ -79,7 +96,7 @@ Exploratory Data Analysis involved gaining a preliminary understanding of the da
 | Power Query | Data import, transformation, and cleaning from CSV file                   |
 | Power Pivot | Data modeling, complex calculations, relationships, and analysis |                                                               
 
-## Data Transformation
+# Data Transformation
 The raw data contained in the sales_data.csv file underwent several transformation processes to prepare it for analysis:
 Data was efficiently cleaned and transformed with Power Query Editor in Excel 
 
@@ -153,14 +170,16 @@ Total Refund
                  fact_table[Quantity Returned] * RELATED(Dim_Products[Sales Price]))
 ```
 
-## Data Modelling
+# Data Modelling
 Created a robust and efficient data model that supported the analysis of customer behavior, product performance, and store-level profitability at QuickyQuest Enterprises. By following this data modeling approach, QuickyQuest Enterprises was able to establish a solid foundation for data analysis and reporting, enabling informed decision-making and effective business management. The calculations part shows measures that were calculated within the data model. Separating calculations into a dedicated table helped maintain a clean and organized data model, making it easier to understand and manage.
 
 ![Data Modelling](https://github.com/user-attachments/assets/05afe9b4-8265-4180-80b1-bce10306c212)
 
-## Data Analysis and Visualization
-For visualizing this analysis 3 dashboards were created:
-**1.	Store-Level Revenue vs Target Dashboard (Stores Revenue)**
+# Data Analysis and Visualization
+For visualizing this analysis three (3) dashboards were created:
+
+## 1.	Store-Level Revenue vs Target Dashboard (Stores Revenue)
+
 Store-Level Revenue vs Target Dashboard provides insights on:
 -	Store Revenue vs Target: Presents a comparison of revenue vs. target for each store, which helps in understanding which stores are under or over-performing against their targets.
 -	Month-by-Month Analysis: Offers a detailed month-by-month breakdown of total revenue and targets, highlighting variances. This can be important for financial planning and performance 
@@ -176,7 +195,8 @@ From the above Store-Level Revenue vs Target Dashboard:
 -	Rapid Refreshment store has significantly exceeded its target revenue, showing a variance of +31.1%.
 -	Quick Stop store underperformed, with a variance of -10.8% from its target revenue.
 
- **2.	Time-Frame Analysis Dashboard (Time Frame)**
+ ## 2.	Time-Frame Analysis Dashboard (Time Frame)
+ 
 Time-Frame Analysis Dashboard provides insights on:
 -	Quarterly Revenue Analysis: Shows revenue generated per quarter against the average,
   providing a quick view of performance relative to the norm.
@@ -188,22 +208,30 @@ Time-Frame Analysis Dashboard provides insights on:
 ![Time Frame Dashboard](https://github.com/user-attachments/assets/04eb9189-6a19-4712-9d27-6dafff0ecf92)
 
 From the above Time-Frame Analysis Dashboard:
-Weekday/Weekend Revenue:
+
+#### Weekday/Weekend Revenue:
+
+![Weekdays vs Weekends revenue ](https://github.com/user-attachments/assets/b4fd4171-c7f9-4402-8ce4-6cd13f573c0a)
+
 -	Revenue Generated by Weekdays: $2M (71% of total revenue)
 -	Revenue Generated by Weekends: $846K (29% of total revenue)
 -	Weekdays are the primary drivers of revenue for the company.
   
- Monthly Revenue Growth:
- 
+ #### Monthly Revenue Growth:
+ -	Month of May and August exceeded their target revenue
+   
  ![Month over Month](https://github.com/user-attachments/assets/58e55381-70b0-4606-bd71-bc75088cbc9a)
--	Month of May and August exceeded their target revenue
   
-Quarterly Revenue Growth:
+#### Quarterly Revenue Growth:
+
+![Quarterly revenue growth](https://github.com/user-attachments/assets/509418bc-5287-4edd-89cc-b87000664f91)
+
 -	The company's quarterly revenue has fluctuated throughout the year.
 -	There have been periods of growth and decline, indicating seasonality or other factors influencing revenue.
 -	The average quarterly revenue is approximately $136,869.
 
-**3.	Profitability View Dashboard (Profitability)**
+## 3.	Profitability View Dashboard (Profitability)
+
 Profitability View Dashboard provides insights on:
 -	Customer Analysis: provide insights into the profit generated from male and female
   customers, and breaks down the average spending by customer age-groups, showing which age groups are most profitable.
@@ -215,36 +243,43 @@ Profitability View Dashboard provides insights on:
 ![Profitability View Dashboard](https://github.com/user-attachments/assets/8a0c6a6a-68cc-4a39-8e27-c97e5812bf95)
 
 From the above Profitability View Dashboard:
-Customer Analysis:
+
+#### Customer Analysis:
+
+![Customer analysis](https://github.com/user-attachments/assets/73019b4f-cf94-4f91-8f26-61702bed4ecc)
+
 -	Gender-Based Profit: Female customers contribute slightly more to overall profit than male customers, accounting for 48.53% of total profit compared to 51.47% for male customers.
 -	Profit by Customer Age: The 31-40 age group is the most profitable, followed by the 41-50 age group.
 
-Product Analysis:
+#### Product Analysis:
+
+![Profit margin by product category](https://github.com/user-attachments/assets/62d1bbfb-c2a2-4bbf-b4b2-c241cd1eacc1)
+
 -	Profit Margin by Product Category: Soft drinks and sports drinks have the highest profit margins, while alcoholic beverages and juice have the lowest.
 -	Top-Selling Products: Common Splash, Eight Brew, and Attorney Mist are the top-selling products.
 -	Product Return and Refund Rates: Product return and refund rates are relatively low, indicating high customer satisfaction.
 
-Volume-Driven Profitability:
+#### Volume-Driven Profitability:
 -	Top Profitable Products: Common Splash, Eight Brew, and Attorney Mist are not only top-selling but also highly profitable.
 
-Profitability Trends:
+#### Profitability Trends:
 
 ![Profitability Trend](https://github.com/user-attachments/assets/93e1e820-111c-4574-9613-26aa7e963689)
 
 -	Trend in Profit & MOM Growth Rate: The overall profit trend has been positive, with month-over-month growth rates fluctuating but generally showing an upward trend.
 -	Profit Trend by Weekday: Tuesdays and Wednesdays generally have higher profit margins compared to other weekdays.
 
-Store Performance:
+#### Store Performance:
 -	Top-5 Profitable Locations: Washington, California, Michigan, Virginia, and Missouri are the top-5 profitable locations.
 -	Average Customer Age: The average customer age varies across different locations, indicating varying customer demographics.
 
-## Overall Performance Analysis Findings
+# Overall Performance Analysis Findings
 -	QuickyQuest enterprises has demonstrated consistent revenue growth, exceeding the overall target by +3.7%.
 -	Customer segmentation analysis revealed that female customers and specific age groups contribute significantly to profit.
 -	The product mix is well-balanced, with a focus on high-margin and high-volume products.
 -	Store performance varies across different locations, indicating the need for tailored strategies to optimize profitability.
 
-## Conclusions and Recommendations
+# Conclusions and Recommendations
 -	Leverage successful strategies from top-performing stores.
 -	Optimize staffing and operational decisions based on weekday/weekend revenue patterns.
 -	Targeted Marketing: Implement targeted marketing campaigns to attract and retain profitable customer segments.
